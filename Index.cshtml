@@ -1,0 +1,33 @@
+﻿@using GrazioliwebApp.Models
+@model AspNetUsers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <div id="model-list">
+
+    </div>
+
+    <script src="~/ViewModels/Gridder.js"></script>
+    <script>
+        $("#model-list").gridder(
+        {
+            headerText: new Array("ModelName", "NumberOfAxels", "Diameter"),
+            propertyName: new Array("ModelName", "ModelNumberOfAxels", "ModelDiameter"),
+            path: "/User/ModelList",
+            key: "Guid",
+            value: "@Model.Guid",
+            tableTemplate: "table-dark",
+        });
+    </script>
+</body>
+</html>
