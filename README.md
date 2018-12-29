@@ -20,5 +20,7 @@ USER GUIDE
             
 4) The library will inject the table in the container, in this case "#model-list"         
 
+Please use "row" visualization for this file
+
 Thanks!
  
